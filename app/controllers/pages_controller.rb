@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
 	def home
-		@user = User.all
-		@cat = Cat.all
-		@todo = Todos.all
+		u = User.all
+		@user = u.each { |x| puts x }
+		c = Cat.all
+		@cat = c.each { |x| puts x }
+		t = Todos.all
+		@todo = t.each { |x| puts x }
 	end
 end
